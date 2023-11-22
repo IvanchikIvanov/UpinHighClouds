@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровое Меню</title>
+    <link rel="stylesheet" href=".\css\index.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="title">Futures Game</h1>
+        <div class="menu main-menu">
+            <ul class="menu-list">
+                <li><a href="#" class="menu-item" id="start-button">Старт</a></li>
+                <li><a href="#" class="menu-item">Опции</a></li>
+                <li><a href="#" class="menu-item">Настройки</a></li>
+            </ul>
+        </div>
+        <div class="menu secondary-menu hidden">
+            <ul class="menu-list">
+                <li><a href="#" class="menu-item" id="new-game-button">Новая Игра</a></li>
+
+                <li><a href="#" class="menu-item">Загрузить Игру</a></li>
+                <li><a href="#" class="menu-item" id="back-button">Назад</a></li>
+
+            </ul>
+        </div>
+    </div>
+        <!-- Другие элементы меню -->
+    <div class="game-container hidden" id="game-container">
+        <div class="team team-long">
+            <div class="car vibrate" id="car-long">
+                <img src=".\images\cloud.svg" alt="Облачко">
+            </div>
+            <button class="gas-button" id="gas-long">Газ</button>
+        </div>
+        <div class="team team-short">
+            <div class="car vibrate" id="car-short">
+                <img src=".\images\CloudYellow.svg" alt="Облачко">
+            </div>
+            <button class="gas-button" id="gas-short">Газ</button>
+        </div>
+    </div>
+
+
+
+    <script src=".\js\script.js"></script>
+</body>
+</html>
