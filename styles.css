@@ -1,0 +1,134 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e66465, #9198e5);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.game-container {
+    z-index: 10; /* Убедитесь, что это значение выше, чем у фоновых элементов */
+    display: flex;
+    height: 100%;
+}
+
+.team {
+    flex: 1;
+    position: relative;
+}
+
+.car {
+    position: absolute;
+    bottom: 50px; /* Вы можете настроить это значение */
+    /* Удалите или адаптируйте следующие свойства, если они больше не нужны */
+    /* width: 100px; */
+    /* height: 50px; */
+    /* background-color: blue; */
+    /* color: white; */
+    /* text-align: center; */
+    /* line-height: 50px; */
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center; /* Центрирование SVG внутри .car */
+    align-items: center; /* Центрирование SVG внутри .car */
+}
+
+/* Стили для SVG внутри .car */
+.car svg {
+    width: 100px; /* Установите подходящий размер для SVG */
+    height: auto; /* Поддерживает пропорции SVG */
+}
+
+.gas-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+}
+
+
+/* Скрыть элемент */
+.hidden {
+    display: none;
+}
+
+.icon-cloud.l {
+    position: absolute;
+    color: #F67546;
+    font-size: 200px;
+    bottom: 100px; /* или другое значение для корректного позиционирования */
+    left: 50%; /* или другое значение */
+    transform: translateX(-50%); /* центрирование относительно текущей позиции */
+}
+
+
+.vibrate {
+    animation: vbr 0.5s infinite alternate;
+}
+
+@keyframes vbr {
+    from {
+        margin-left:0px;
+        animation-timing-function: cubic-bezier(0.25, 0.01, 0.55, 0.16);
+    }
+    10% {
+        margin-left:2px;
+        animation-timing-function: cubic-bezier(0.52, 0.44, 0.47, 0.44);
+    }
+    20% {
+        margin-left:-2px;
+        animation-timing-function: cubic-bezier(0.53, 0.56, 0.48, 0.56);
+    }
+    30% {
+        margin-left:0px;
+        animation-timing-function: cubic-bezier(0.45, 0.84, 0.75, 0.99);
+    }
+}
